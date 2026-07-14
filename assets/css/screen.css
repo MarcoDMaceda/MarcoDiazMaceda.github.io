@@ -195,14 +195,6 @@ body {
     text-rendering: geometricPrecision;
 }
 
-::-moz-selection {
-    background: #D6EDFF;
-}
-
-::selection {
-    background: #D6EDFF;
-}
-
 h1, h2, h3,
 h4, h5, h6 {
     -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
@@ -553,6 +545,29 @@ button {
     vertical-align: middle;
 }
 
+.imagen-boton {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: #FFF;
+    transition: transform 0.3s ease;
+}
+
+
+.imagen-boton:hover {
+    transform: scale(1.15);
+}
+
+
+.bottom-right-title {
+    position: absolute;
+    width: 40px;
+    right: -60px;
+    bottom: 30px;
+    text-align: center;
+}
+
 /* Wraps the main content & footer */
 .site-wrapper {
     position: relative;
@@ -589,6 +604,12 @@ body.nav-opened .site-wrapper {
     background-size: cover;
     overflow: hidden;
 }
+
+/*.recuadro-imagen{
+    height: 10px;
+    border: 3px solid red;
+    gap: 200px
+}*/
 
 .main-header .inner {
     width: 80%;
@@ -844,6 +865,7 @@ body.nav-opened .nav {
 
 /* Appears in the top left corner of your home page */
 .blog-logo {
+    border-radius: 20px;
     display: block;
     float: left;
     background: none !important; /* Makes sure there is never a background */
@@ -854,66 +876,167 @@ body.nav-opened .nav {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    border-radius: 10px;
     display: block;
     height: 38px;
     padding: 1px 0 5px 0;
     width: auto;
 }
 
-.menu-button {
+.nav-buttons {
+    float: right;
+}
+
+.nav-buttons .no-menu-button {
+    margin-left: 8px;
+    text-decoration: none;
+    color: white;
+}
+
+.floating-menu {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    z-index: 9999;
+}
+
+/* Botón circular/cuadrado redondeado */
+.floating-button {
+    width: 75px;
+    height: 75px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.25);
+    color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 60px;
+    position: relative;
+    z-index: 2;
+    transition: color 0.5s ease;
+}
+
+.floating-button:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* Barra oculta */
+.floating-bar {
+    position: absolute;
+    bottom: 85px;
+    left: 0;
+    width: 75px;
+    height: 0px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+    transition: height 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:14px
+}
+
+/* Botones dentro de la barra */
+.floating-bar a {
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+
+.main-header.no-cover {
+    min-height: 0;
+    height: 0px;
+    background: none;
+    margin-bottom: 40px;
+}
+
+.main-nav {
+    position: relative;
+}
+
+.post-content {
+    margin: 20px 20px;
+    padding: 0 30px;
+}
+
+.black-strip{
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+/* Animación al pasar el ratón */
+.floating-menu:hover .floating-bar {
+    height: 250px;
+    padding-top:10px;
+}
+
+.no-menu-button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     display: inline-block;
     float: right;
     height: 38px;
+    background: rgba(0, 0, 0, 0.65);
     padding: 0 15px;
     border-style: solid;
     border-width: 1px;
     opacity: 1;
     text-align: center;
-    font-size: 12px;
+    font-size: 16px;
     text-transform: uppercase;
     line-height: 35px;
     white-space: nowrap;
     border-radius: 3px;
     transition: all 0.5s ease;
 }
-.menu-button:before {
+.no-menu-button:before {
     font-size: 12px;
     font-weight: bold;
     margin-right: 6px;
     position: relative;
     top: 1px;
 }
-.menu-button:hover {
+.no-menu-button:hover {
     background: #fff;
 }
-.menu-button:focus {
+.no-menu-button:focus {
     outline: 0;
 }
 
 /* When the navigation is closed */
-.nav-closed .menu-button {
+.nav-closed .no-menu-button {
     color: #fff;
     border-color: rgba(255, 255, 255, 0.6);
 }
-.nav-closed .menu-button:hover {
+.nav-closed .no-menu-button:hover {
     color: #222;
 }
 
 /* When the navigation is closed and there is no cover image */
-.nav-closed .no-cover .menu-button {
+.nav-closed .no-cover .no-menu-button {
     border-color: #BFC8CD;
     color: #9EABB3;
 }
-.nav-closed .no-cover .menu-button:hover {
+.nav-closed .no-cover .no-menu-button:hover {
     border-color: #555;
     color: #555;
 }
 
 /* When the navigation is opened */
-.nav-opened .menu-button {
+.nav-opened .no-menu-button {
     padding: 0 12px;
     background: #111;
     border-color: #111;
@@ -924,7 +1047,7 @@ body.nav-opened .nav {
     transition: all 0.3s ease;
 }
 
-.nav-opened .menu-button .word {
+.nav-opened .no-menu-button .word {
     opacity: 0;
     transition: all 0.3s ease;
 }
@@ -978,7 +1101,7 @@ body.nav-opened .nav {
 }
 
 /* Add subtle load-in animation for content on the home page */
-.home-template .page-title {
+/*home-template .page-title {
     -webkit-animation: fade-in-down 0.6s;
     animation: fade-in-down 0.6s both;
     -webkit-animation-delay: 0.2s;
@@ -989,7 +1112,7 @@ body.nav-opened .nav {
     animation: fade-in-down 0.9s both;
     -webkit-animation-delay: 0.1s;
     animation-delay: 0.1s;
-}
+}*/
 
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
@@ -1311,6 +1434,14 @@ body.page-template .post-title {
 .author-head.main-header {
     height: 40vh;
     min-height: 180px;
+}
+
+.no-te-pases{
+    margin-bottom: 0;
+}
+
+.tampoco-te-pases{
+    margin-top: 0;
 }
 
 .no-cover.author-head.main-header {
@@ -1781,6 +1912,7 @@ body.page-template .post-title {
 
     .blog-logo img {
         padding: 4px 0;
+        border-radius: 20px;
     }
 
     .page-title {
@@ -1939,19 +2071,19 @@ body.page-template .post-title {
         height: 30px;
     }
 
-    .menu-button {
+    .no-menu-button {
         padding: 0 5px;
         border-radius: 0;
         border-width: 0;
         color: #2e2e2e;
         background: transparent;
     }
-    .menu-button:hover {
+    .no-menu-button:hover {
         color: #2e2e2e;
         border-color: transparent;
         background: none;
     }
-    body.nav-opened .menu-button {
+    body.nav-opened .no-menu-button {
         background: none;
         border: transparent;
     }
@@ -1965,11 +2097,11 @@ body.page-template .post-title {
     .no-cover .main-nav.overlay {
         background: none;
     }
-    .no-cover .main-nav.overlay .menu-button {
+    .no-cover .main-nav.overlay .no-menu-button {
         border: none;
     }
 
-    .main-nav.overlay .menu-button {
+    .main-nav.overlay .no-menu-button {
         border-color: transparent;
     }
 

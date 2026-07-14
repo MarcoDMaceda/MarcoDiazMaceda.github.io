@@ -7,14 +7,15 @@ paginate: 5
 language: 'en-uk'
 
 # Website info
-name: 'Finding The Way Home'
-description: "A beautiful narrative written with the world's most elegant publishing platform. The story begins here."
+name: 'Marco Díaz Maceda'
+subtitle: "Research in mathematical physics, multisymplectic <br> formalism and quantum field theory"
+description: "Personal webpage, aquí estamos"
 
-short_url: 'jekyllt.github.io/jasper/'
-google_analytics: UA-69281367-1
-disqus: username
+short_url: ''
+google_analytics: 
+disqus: 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: /jasper/
+baseurl: /
 
 # Permalinks
 permalink: /:title
@@ -32,6 +33,7 @@ plugins: [jekyll-paginate]
 # Disqus comments as a per-post basis
 # ...
 
+image: /assets/images/Marco_blackboard.jpeg
 
 # Settings for builing master branch with travis-ci
 # with jekyll-travis
@@ -43,15 +45,7 @@ plugins: [jekyll-paginate]
 # repo defaults to USERNAME.github.io
 # Branch defaults to "source" for USERNAME.github.io
 # or "master" otherwise
-safe: false
-lsi: false
-username: jekyllt
-repo: jasper
-branch: master
-relative_source: ../jasper/
-destination: ../jasper-pages/
-production_url:  https://jekyllt.github.io/jasper/
-source_url:  https://github.com/jekyllt/jasper/
+
 
 exclude:
   - README.md
