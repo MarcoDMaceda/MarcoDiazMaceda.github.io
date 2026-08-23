@@ -2546,6 +2546,8 @@ summary h3{
   border-radius: 14px !important;
   padding: 4px !important;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18) !important;
+  z-index: 1000 !important;
+  position: relative;
 }
 
 .leaflet-popup-content {
@@ -2850,6 +2852,10 @@ summary h3{
         height: 470px !important;
         width: 100% !important;
         overflow: hidden !important;
+    }
+
+    .leaflet-popup-content-wrapper {
+        width: 340px !important;
     }
 
     .mail {

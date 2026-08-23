@@ -205,7 +205,9 @@ I generally use my second surname when abbreviating or referring to my name
 <script>
   const isMobile = window.innerWidth <= 768;
 
-  const map = L.map('map').setView(
+  const map = L.map('map',
+    isMobile ? {zoomControl: false} : {zoomControl: true}
+  ).setView(
         isMobile ? [45, 0] : [45, 12],
         isMobile ? 3 : 4
     );
