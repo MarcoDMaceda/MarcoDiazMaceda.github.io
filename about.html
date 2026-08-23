@@ -1,0 +1,255 @@
+---
+layout: default
+title: About me
+permalink: /about/
+navigation: false
+---
+
+<header class="black-strip">
+{% include ventanas.html %}
+</header>
+
+<section class="talks-page">
+
+<h1>About me</h1>
+
+<p>
+    My name is Marco Díaz Maceda (/ˈmaɾ.ko ˈdi.aθ maˈθe.ða/)<sup><button id="boton-altavoz">
+        <img src="../assets/images/altavoz2.png" id="altavoz"> 
+    </button></sup>.
+    <!-- <a id="boton-altavoz">/ˈmaɾ.ko ˈdi.aθ maˈθe.ða/</a><button id="boton-altavoz">
+        &#x1F50A;
+    </button>]</ˈmäɾ.k<span class="e-con-diacritico">
+  <span>o</span><span>̞</span>
+</span> di.aθ maˈθ<span class="e-con-diacritico">
+  <span>e</span><span>̞</span>
+</span>.ða/)--> 
+Díaz is my paternal surname and Maceda my maternal surname.
+Since Díaz is a relatively common surname,
+I generally use my second surname when abbreviating or referring to my name
+(e.g, Mr. Maceda or M. D. Maceda).
+
+<!--Both Díaz and Maceda are surnames (parent and mother surname, respectively). Since Díaz is a pretty common surname, I prefer, for abreviations, to use my second surname (e.g, Mr. Maceda or M. D. Maceda).-->
+</p>
+
+<audio id="audio">
+  <source src="../assets/audio/MarcoDíazMaceda.mp3" type="audio/mpeg">
+  Tu navegador no admite audio HTML5.
+</audio>
+
+<script>
+  const boton = document.getElementById("boton-altavoz");
+  const audio = document.getElementById("audio");
+
+  boton.addEventListener("click", () => {
+    audio.currentTime = 0;
+    audio.play();
+  });
+</script>
+
+
+<p>
+    I'm a PhD student in mathematical physics at Universidad Autónoma de Madrid. 
+    Based in Madrid, I'm a member of the 
+    <a href="https://geommphys.github.io/" target="_blank">
+      Geometrical Mathematical Physics Research Group</a>,
+    where I conduct my research under the supervision of Jordi Gaset,
+    focusing on foundational questions of physics from a mathematical point of view.
+</p>
+
+<p>
+  I hold a Bachelor's degree in Physics and a Master's degree in Theoretical Physics.
+  Over the course of my studies, my interests have gradually shifted towards mathematical physics. In particular, I am interested in the foundations of physical theories and in the development of mathematically consistent formulations of quantum field theory grounded in the geometrical structures that arise in classical field theory. Ultimately, I hope this line of research can contribute to a deeper understanding of fundamental physics, including the longstanding problem of quantum gravity.
+  <!--I've been moving into more mathematical physics with time, but I'm interested on the foundational problems of physics, with the objective of creating a mathematically consistent quantum field theory,
+  with the ultimate objective of contributing to the advancement in modern physics, such as the theory of quantum gravity.-->
+</p>
+
+<p>
+  My interest in mathematics and physics also extends beyonds its technical aspects, particularly in questions concerning the foundations and epistemological limits of scientfic knowledge.
+  For this reason, I also participate in <a href="https://kantian-project.webnode.es/" target="_blanck">
+      Kantian project</a>, where we explore these questions from a Kantian perspective.
+</p>
+
+<p>
+    Outside academia, I play rugby, from which I enjoy the combination of physicality with technique and strategy with teamwork. I also play the electric guitar in a band together with other students of our research group.
+    The music I enjoy to listen is hard rock and metal. The following 
+    <a href="https://music.youtube.com/playlist?list=PLRAdz4pToNoE&si=qAGScJ4wHozPGIXx" target="_blank">
+      playlist</a>
+    is a selection of music I like listening to, 
+    with one representative for each equivalence class. 
+    Among classical works, my favourite piece is 
+    <a href="https://youtu.be/Qut5e3OfCvg?si=dz6IcWEJTF4sjvl4" target="_blank">Dvorak's Symphony No. 9 (New World Symphony)</a>.
+    I also enjoy playing video games. Here you can find my <a href="https://steamcommunity.com/profiles/76561199438929744/"
+   target="_blank"
+   rel="noopener noreferrer">
+  Steam</a> profile.
+</p>
+
+<p>
+  Below, you can find some photos of me and my friends, as well as a map showing all the cities I’ve visited in connection with my research.
+</p>
+
+<h1>Photos</h1>
+
+<!--<section class="album">
+  <img src="../assets/images/personal/Personal1.jpeg">
+  <img src="../assets/images/personal/Personal2.jpeg">
+  <img src="../assets/images/personal/Personal3.jpeg">
+  <img src="../assets/images/personal/Personal4.jpeg">
+  <img src="../assets/images/personal/Personal5.jpeg">
+  <img src="../assets/images/personal/Personal6.jpeg">
+  <img src="../assets/images/personal/Personal7.jpeg">
+  <img src="../assets/images/personal/Personal8.jpeg">
+  <img src="../assets/images/personal/Personal9.jpeg">
+  <img src="../assets/images/personal/Personal10.jpeg">
+</section>-->
+
+<section class="album">
+  <div class="foto">
+    <img src="../assets/images/personal/Personal1.jpeg">
+    <div class="cartel">Me presenting my first poster about boundary terms in Miraflores</div>
+  </div>
+
+  <div class="foto">
+    <img src="../assets/images/personal/Personal10.jpeg">
+    <div class="cartel">Me giving my firts talk at Loughborough University</div>
+  </div>
+
+  
+  <div class="foto">
+    <img src="../assets/images/personal/Personal4.jpeg">
+    <div class="cartel">Me sharing a dessert with my supervisor Jordi Gaset</div>
+  </div>
+
+  <div class="foto">
+    <img src="../assets/images/personal/Personal3.jpeg">
+    <div class="cartel">Playing rugby</div>
+  </div>
+
+  
+  <div class="foto">
+    <img src="../assets/images/personal/Personal6.jpeg">
+    <div class="cartel">Taking notes in La Laguna University</div>
+  </div>
+
+  <div class="foto">
+    <img src="../assets/images/personal/Personal5.jpeg">
+    <div class="cartel">Rubén, Carla, Matteo and me in Tenerife</div>
+  </div>
+
+  <div class="foto">
+    <img src="../assets/images/personal/Personal7.jpeg">
+    <div class="cartel">Me giving my talk about field theory in manifolds with boundaries in Miraflores</div>
+  </div>
+
+  <div class="foto">
+    <img src="../assets/images/personal/Personal8.jpeg">
+    <div class="cartel">Trip to the lake in Bȩdlewo with the students of the summer school</div>
+  </div>
+
+  <div class="foto">
+    <img src="../assets/images/personal/Personal9.jpeg">
+    <div class="cartel">Me giving a seminar at the University of Warsaw</div>
+  </div>
+
+
+  <!-- Repite lo mismo para las demás -->
+</section>
+
+<h1>Places</h1>
+
+<div class="map-shadow">
+<div id="map"></div>
+</div>
+
+
+</section>
+
+
+
+<div id="visor" class="visor">
+  <span class="cerrar">&times;</span>
+  <img id="imagenGrande" src="" alt="Imagen ampliada">
+</div>
+
+
+
+<script>
+  const fotos = document.querySelectorAll('.foto img');
+  const visor = document.getElementById('visor');
+  const imagenGrande = document.getElementById('imagenGrande');
+  const cerrar = document.querySelector('.cerrar');
+
+  fotos.forEach(foto => {
+    foto.addEventListener('click', function () {
+      imagenGrande.src = this.src;
+      visor.style.display = 'flex';
+    });
+  });
+
+  cerrar.addEventListener('click', function () {
+    visor.style.display = 'none';
+  });
+
+  visor.addEventListener('click', function (e) {
+    if (e.target === visor) {
+      visor.style.display = 'none';
+    }
+  });
+</script>
+
+
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+  const isMobile = window.innerWidth <= 768;
+
+  const map = L.map('map').setView(
+        isMobile ? [45, 0] : [45, 12],
+        isMobile ? 3 : 4
+    );
+  
+    // {scrollWheelZoom: false}
+  // const map = L.map('map').setView([coord1, coord2], 17);
+
+  //map.getContainer().addEventListener('wheel', function (e) {
+    //if (e.ctrlKey) {
+      //e.preventDefault();
+
+      //map.scrollWheelZoom.enable();
+    //} else {
+      //map.scrollWheelZoom.disable();
+    //}
+  //}, { passive: false });
+
+  const map1 = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
+  const atr1 = {attribution: '&copy; OpenStreetMap contributors'};
+
+  const map2 = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
+  const atr2 = {attribution: '&copy; OpenStreetMap contributors &copy; CARTO'};
+  
+  const map3 = "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png";
+  const atr3 = {attribution: '&copy; OpenStreetMap contributors &copy; CARTO'};
+
+  const map4 = "https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png";
+  const atr4 = {attribution: 'Map data &copy; OpenStreetMap contributors, SRTM | Map style &copy; OpenTopoMap'}
+
+  L.tileLayer(map2, atr2).addTo(map);
+
+  L.marker([40.45345, -3.71885]).addTo(map).bindPopup("<h4>Madrid</h4><p>Madrid is my home town and the place where I carry out my research. Here is also based our <a href='https://geommphys.github.io/' target='_blanck'>research group</a>.</p>")
+
+  // L.marker([40.5453, -3.6952]).addTo(map).bindPopup('<b>Madrid</b><br>Base home.')
+
+  L.marker([40.820489, -3.785111]).addTo(map).bindPopup("<h4>Miraflores de la Sierra</h4><p>Here we celebrate anually the <a href='https://www.icmat.es/schools/2026/SUMMER-SCHOOL-GMC/index.php' target='_blanck'>International ICMAT Summer School on Geometry, Dynamics and Field theory</a>. <br><br>Classes on the mornings, talks on the afternoon and games at night. <br><br>Mathematics and physics gets easilly discussed in a swimming pool in the middle of the mountains, after a ping pong match or during the barbecue.<br><br>Here I presented my first poster.</p><div class='foto3'><img src='../assets/images/workshop/Workshop_Miraflores_2026_2.png'></div>")
+
+  L.marker([28.48165, -16.3209]).addTo(map).bindPopup("<h4>La Laguna</h4><p>I traveled to this city in Tenerife for the <a href='https://wp.ull.es/8ibmgmft/' target='_blanck'>VIII Iberoamerican Meeting on Geometry, Dyancamis and Field theory</a>, commemoriating the 60th birthday of Juan Carlos Marrero.<br><br>In contrast to the typical canarian weather, the travel was accompanied by frequent rainfalls. We visited Anaga Natural Park, but I couldn't go to the travel to El Teide because I fell sick.</p><div class='foto3'><img src='../assets/images/workshop/Workshop_Tenerife.jpeg'></div>")
+
+  L.marker([41.119722, 1.260556]).addTo(map).bindPopup("<h4>Tarragona</h4><p>I participated in the <a href='https://webs-deim.urv.cat/~34ifwgp/index.html' target='_blanck'>XXXIV International Fall Workshop on Geometry and Physics</a>, celebrating the research carried out by Narciso Román Roy, who was retiring.</p>")
+
+  L.marker([52.766333, -1.228511]).addTo(map).bindPopup("<h4>Loughborough</h4><p>Travel for the <a href='https://www.lboro.ac.uk/departments/maths/events/conferences-and-workshops/yrw-gdft/' target='_blanck'>XX International Young Researchers Workshop on Geometry, Dynamics and Field Theory</a>.<br><br>Here I presented my first talk about field theory in manifolds with boundary.</p><div class='foto3'><img src='../assets/images/workshop/Workshop_Loughborough.jpeg'></div>")
+  
+  L.marker([52.21275, 20.98270]).addTo(map).bindPopup("<h4>Warsaw</h4><p>I stayed here for one month for a research visit, which coincided with the <a href='https://www.fuw.edu.pl/KMMF/GFT2026/' target='_blanck'>2nd International Workshop on Geometric Field Theory</a><br><br>In this workshop I was awarded with the best talk prize.</p><div class='foto3'><img src='../assets/images/workshop/Workshop_Warsaw.jpeg'></div>")
+
+  L.marker([52.2357966, 16.729391]).addTo(map).bindPopup("<h4>Bȩdlewo</h4><p>Summer school on <a href='https://sites.google.com/impan.pl/dgmp2026/home-page'>Differential-Geometric and Topological Methods in Modern Physics</a> in a 19th century palace surrounded by lakes and forest. <br><br>After the conferences on the morning, we enjoyed playing pull, foosball and darts, and engaged mathematical conversations with the participants around the bonfire.</p><div class='foto2'><img src='../assets/images/workshop/Workshop_Bedlewo3.png'></div>")
+</script>

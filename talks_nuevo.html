@@ -1,0 +1,119 @@
+---
+layout: default
+title: Talks
+permalink: /talks/
+navigation: false
+---
+
+<header class="black-strip">
+    {% include ventanas.html %}
+</header>
+
+<section class="talks-page">
+
+<h1>Talks and Seminars</h1>
+
+{% assign talks = site.data.talks | sort: "year" | reverse %}
+
+<div class="talk-list">
+
+{% for talk in talks %}
+
+<article class="talk-card">
+
+    <h3>{{ talk.title }}</h3>
+
+    <p class="event">
+        <a href="{{ talk.workshop-link }}">
+            {{ talk.workshop }}
+        </a>
+    </p>
+
+    <p class="meta">
+        <strong>{{ talk.date }} {{ talk.year }}</strong>
+        | {{ talk.place }}
+    </p>
+
+
+    <div class="resources">
+
+    {% if talk.pdf %}
+        <a class="resource" href="{{ talk.pdf }}" target="_blank">
+            📄 PDF
+        </a>
+    {% endif %}
+
+    {% if talk.slides %}
+        <a class="resource" href="{{ talk.slides }}" target="_blank">
+            🖥 Slides
+        </a>
+    {% endif %}
+
+    {% if talk.video %}
+        <a class="resource" href="{{ talk.video }}" target="_blank">
+            ▶ Video
+        </a>
+    {% endif %}
+
+    </div>
+
+</article>
+
+{% endfor %}
+
+</div>
+
+
+
+<h1>Posters</h1>
+
+{% assign posters = site.data.posters | sort: "year" | reverse %}
+
+<div class="talk-list">
+
+{% for talk in posters %}
+
+<article class="talk-card">
+
+    <h3>{{ talk.title }}</h3>
+
+    <p class="event">
+        <a href="{{ talk.workshop-link }}">
+            {{ talk.workshop }}
+        </a>
+    </p>
+
+    <p class="meta">
+        <strong>{{ talk.date }} {{ talk.year }}</strong>
+        | {{ talk.place }}
+    </p>
+
+    <div class="resources">
+
+    {% if talk.pdf %}
+        <a class="resource" href="{{ talk.pdf }}" target="_blank">
+            📄 PDF
+        </a>
+    {% endif %}
+
+    {% if talk.slides %}
+        <a class="resource" href="{{ talk.slides }}" target="_blank">
+            🖥 Slides
+        </a>
+    {% endif %}
+
+    {% if talk.video %}
+        <a class="resource" href="{{ talk.video }}" target="_blank">
+            ▶ Video
+        </a>
+    {% endif %}
+
+    </div>
+
+</article>
+
+{% endfor %}
+
+</div>
+
+</section>

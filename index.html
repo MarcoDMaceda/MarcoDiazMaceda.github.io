@@ -19,19 +19,8 @@ current: home
 <header class="main-header {% if page.cover %}"
         style="background-image: url({{ site.baseurl }}{{ page.cover }}) {% else %}no-cover{% endif %}">
             
-    <nav class="main-nav overlay clearfix">
-        {% if page.logo %}
-        <a class="blog-logo" href="{{ site.baseurl }}">
-            <img src="assets/images/logo.png" alt="Webpage Logo" />
-        </a>
-        {% endif %}
-
-        <div class="nav-buttons">
-            <a class="no-menu-button" href="assets/pdf/CV_Marco (2).pdf", target="_blank">CV</a>
-            <a class="no-menu-button" href="{{ '/talks/' | relative_url }}">Talks</a>
-            <a class="no-menu-button" href="{{ '/research/' | relative_url }}">Research</a>
-        </div>
-    </nav>
+    
+    {% include ventanas.html %}
     
     <div class="vertical">
         <div class="main-header-content inner bottom-right-title">
