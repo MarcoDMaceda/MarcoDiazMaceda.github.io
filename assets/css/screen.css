@@ -2546,8 +2546,6 @@ summary h3{
   border-radius: 14px !important;
   padding: 4px !important;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18) !important;
-  z-index: 1000 !important;
-  position: relative;
 }
 
 .leaflet-popup-content {
