@@ -2767,7 +2767,7 @@ summary h3{
         position: relative;
     }
 
-    /* Mostrar botón hamburguesa */
+    
     .menu-toggle {
         display: block;
         background: none;
@@ -2777,20 +2777,33 @@ summary h3{
         padding: 5px;
     }
 
-    /* Ocultar menú inicialmente */
-    .menu {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background: white;
-        padding: 20px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+   
+.menu {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+
+    min-width: 110px;
+    padding: 10px;
+
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+
+    z-index: 99999;
+}
+
+    .no-menu-button{
+        margin-left: 0 !important;
     }
 
-    /* Mostrar menú cuando está abierto */
+   
     .menu.open {
         display: flex;
         flex-direction: column-reverse;
@@ -2801,6 +2814,7 @@ summary h3{
         background-color: #B3B3B3;
     }
 
+    
     .faq-answer {
         font-size: 16px;
     }
@@ -2819,6 +2833,15 @@ summary h3{
 
     .event a {
         font-size: 14px;
+    }
+
+    .talk-card {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .talks-page{
+        padding: 15px;
     }
 
     .talks-page h1 {
@@ -2845,6 +2868,11 @@ summary h3{
         font-size: 16px;
     }
 
+    .math-display-horizontal{
+        overflow-x: auto;
+        max-width: 100%;
+    }
+
     #map {
         border-radius: 14px !important;
         height: 470px !important;
@@ -2853,7 +2881,7 @@ summary h3{
     }
 
     .leaflet-popup-content-wrapper {
-        width: 340px !important;
+        width: 300px !important;
     }
 
     .mail {
@@ -2867,6 +2895,22 @@ summary h3{
         font-weight: 700;
         font-family: "Open Sans", sans-serif;
         color: #fff;
+    }
+
+    .leaflet-popup-content{
+        margin-top: 11px !important;
+        margin-bottom: 11px !important;
+        margin-left: 14px !important;
+        margin-right: 14px !important;
+    }
+
+    .leaflet-popup-content h4{
+        font-size: 16px;
+    }
+
+    .leaflet-popup-content p{
+        line-height: normal;
+        font-size: 12px;
     }
 
     .page-description {

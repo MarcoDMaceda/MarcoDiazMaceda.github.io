@@ -22,6 +22,19 @@
 function toggleMenu() {
     document.querySelector('.menu').classList.toggle('open');
 }
+
+const menu = document.querySelector('.menu');
+const menuToggle = document.querySelector('.menu-toggle');
+
+document.addEventListener('click', (event) => {
+    const clickDentroDelMenu = menu.contains(event.target);
+    const clickEnElBoton = menuToggle.contains(event.target);
+
+    if (!clickDentroDelMenu && !clickEnElBoton) {
+        menu.classList.remove('open');
+    }
+});
+
 </script>
 
 

@@ -22,12 +22,8 @@ navigation: false
         </h3>
     </summary>
     <div class="faq-answer"><p class="answer-text">I research multisymplectic formalism, a geometric, finite-dimensional, and covariant approach to field theory that generalizes symplectic geometry from classical mechanics to fields extending across spacetime. The objective is to continue developing geometric techniques to further describe field theory through an intrinsic formulation. Some of the open research lines are the following:
-        <ul>
-            <li>Describe field theories on manifolds with boundaries or domain walls using the multisymplectic approach.</li>
-            <li>Describe higher-form symmetries as multivector fields that are symmetries of the multisymplectic structure, proving that their associated Hamiltonian forms are conserved over lower-dimensional surfaces in the form of a generalized Noether theorem.</li>
-            <li>Develop a covariant approach to quantum field theory through the quantization of multisymplectic graded Poisson brackets.</li>
-        </ul></p></div>
-</details>
+        <ul><li>Describe field theories on manifolds with boundaries or domain walls using the multisymplectic approach.</li><li>Describe higher-form symmetries as multivector fields that are symmetries of the multisymplectic structure, proving that their associated Hamiltonian forms are conserved over lower-dimensional surfaces in the form of a generalized Noether theorem.</li><li>Develop a covariant approach to quantum field theory through the quantization of multisymplectic graded Poisson brackets.</li>
+        </ul></p></div></details>
 <details class="question-card">
     <summary>
         <h3>
@@ -99,9 +95,9 @@ navigation: false
     Thus, the solutions of the variational problem are determined by how the vector fields $X$ act on the differential form $\Omega=d\Theta$. Since $\Omega$ is exact, it is also closed, and therefore $\Omega$ is a multisymplectic $(n+1)-$form. In turn, this multisymplectic form describes not only the solutions of the equations of motion, but also the symmetries, conserved quantities, and the evolution of certain observables of the dynamical system, among many other interesting properties, without the need to solve explicitly the equations of motion, which in most cases do not admit explicit solution.
 
     Finally, let me note that the above argument is only applicable for variational problems of the "general kind", in which we look for any section that makes the action stationary, since the applicability of the fundamental lemma of calculus of variations depends on this. However, variational principles in physics are not of this kind. In physics, the variational problem is given by a Lagrangian $L=\mathcal{L}(\phi^i, \partial_\mu\phi^i; x^\mu)d^nx$ which depends on the velocities $\partial_\mu\phi^i$. In such a case, the variation of the action is no longer arbitrary, since the variation of the action has to preserve the fact that the velocities are derivatives of the field. However, we may look for some form $\Theta_{PC}$ (the Poincaré-Cartan form), which is Lepage equivalent to $L=\mathcal{L}d^nx$ (so that they define the same variational problem), and for which the equations of motion of the Lagrangian problem (the Euler-Lagrange equations) are given by the solutions of the general variational problem. Such a differential form indeed exists and is given by:
-    \[
+    <div class="math-display-horizontal">\[
     \Theta_{PC}=\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi^i)}d\phi^i\wedge d^{n-1}x_\mu-\left(\frac{\partial\mathcal{L}}{\partial(\partial_\mu \phi^i)}\partial_\mu \phi^i-\mathcal{L}\right)d^nx
-    \] In this expression for the Poincaré-Cartan form, we recognize the multimomenta and the de Donder-Weyl Hamiltonian as the coefficients of the two terms, thereby explaining the importance of these quantities in the covariant formulation of classical field theory.
+    \]</div> In this expression for the Poincaré-Cartan form, we recognize the multimomenta and the de Donder-Weyl Hamiltonian as the coefficients of the two terms, thereby explaining the importance of these quantities in the covariant formulation of classical field theory.
         </p>
     </div>
 </details>
@@ -120,6 +116,7 @@ navigation: false
     <article class="talk-card">
 
 
+
             {{ paper.authors | join: " and " }},
             "{{ paper.title }}",
 
@@ -128,7 +125,7 @@ navigation: false
             {% endif %}
 
             {% if paper.volume %}
-                {{ paper.volume }}
+                <b>{{ paper.volume }}</b>
             {% endif %}
 
             {% if paper.number %}
@@ -150,6 +147,7 @@ navigation: false
             {% if paper.doi %}
                 DOI: <a href="https://doi.org/{{ paper.doi }}" target="_blank">{{ paper.doi }}</a>.
             {% endif %}
+        
 
         </article>
         {% endfor %}
