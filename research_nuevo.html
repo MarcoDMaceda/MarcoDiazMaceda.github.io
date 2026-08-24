@@ -21,7 +21,7 @@ navigation: false
             What is my research about?
         </h3>
     </summary>
-    <div class="faq-answer"><p class="answer-text">I research multisymplectic formalism, a geometric, finite-dimensional, and covariant approach to field theory that generalizes symplectic geometry from classical mechanics to fields extending across spacetime. The objective is to continue developing geometric techniques to further describe field theory through an intrinsic formulation. Some of the open research lines are the following:
+    <div class="faq-answer"><p class="answer-text">My research focuses on multisymplectic formalism, a geometric, finite-dimensional, and covariant approach to field theory that generalizes symplectic geometry from classical mechanics to fields extending across spacetime. The objective is to continue developing geometric techniques to further describe field theory through an intrinsic formulation. Some of the open research lines are the following:
         <ul><li>Describe field theories on manifolds with boundaries or domain walls using the multisymplectic approach.</li><li>Describe higher-form symmetries as multivector fields that are symmetries of the multisymplectic structure, proving that their associated Hamiltonian forms are conserved over lower-dimensional surfaces in the form of a generalized Noether theorem.</li><li>Develop a covariant approach to quantum field theory through the quantization of multisymplectic graded Poisson brackets.</li>
         </ul></p></div></details>
 <details class="question-card">
@@ -34,11 +34,11 @@ navigation: false
     \] and the dynamics of the fields $\phi^i$ are given by the field configurations that make this functional stationary. The fields that make this action stationary are those fulfilling the Euler-Lagrange equations:
     \[
     \frac{\partial\mathcal{L}}{\partial\phi^i}-\frac{\partial}{\partial x^\mu}\left(\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi^i)}\right)=0
-    \] which are a set of partial differential equations whose solutions determine the dynamics of the fields over spacetime.
+    \] which are a set of partial differential equations whose solutions determine the dynamics of the fields on spacetime.
 
-    This is the Lagrangian formulation of field theory, and everyone is happy with it. However, in some occasions one would like to move to the Hamiltonian side, since this latter formalism gives a more geometric point of view on the dynamics of physical systems. In fact, a lot of results obtained in classical mechanics of point-like systems were developed thanks to the powerful machinery of symplectic geometry, so it is natural that we want to do the same in the field theoretic sense.
+    This is the Lagrangian formulation of field theory, and everyone is happy with it. However, on some occasions one would like to move to the Hamiltonian side, since this latter formalism provides a more geometric point of view on the dynamics of physical systems. In fact, many results obtained in classical mechanics of point-like systems were developed thanks to the powerful machinery of symplectic geometry, so it is natural that we want to do the same in the field theoretic sense.
 
-    In classical mechanics, to pass from the Lagrangian to the Hamiltonian formulation, we proceed as follows: first, we define the momenta $p^i$, conjugate to the variables $q^i$, as:
+    In classical mechanics, to pass from the Lagrangian to the Hamiltonian formulation, we proceed as follows. First, we define the momenta $p_i$, conjugate to the variables $q^i$, as:
     \[
     p_i=\frac{\partial L}{\partial\dot{q}^i}
     \] and then define the Hamiltonian as the Legendre transform of the Lagrangian with respect to time as:
@@ -47,7 +47,7 @@ navigation: false
     \] in such a way that, with these objects, the Euler-Lagrange equations decouple, and instead of having $n$ second order differential equations, we have $2n$ first order differential equations:
     \[
     \dot{q}^i=\frac{\partial H}{\partial p_i}\qquad\dot{p}_i=-\frac{\partial H}{\partial q^i}
-    \] which give a more geometric perspective, since they can be interpreted as the flow of a vector field.
+    \] which provide a more geometric perspective, since they can be interpreted as the flow of a vector field.
 
     If we want to replicate this for field theories, we have to generalize the notions of momenta and Hamiltonian. Usually, this is done by defining the momentum $\pi_i$ associated with each of the fields $\phi^i$ as:
     \[
@@ -57,9 +57,9 @@ navigation: false
     H[\phi^i, \pi_i]=\int_{\Sigma}(\pi_i\partial_0\phi^i-\mathcal{L})d^3x
     \] where $\Sigma$ is a constant-time hypersurface.
     
-    This approach is problematic for several reasons. First, it breaks explicit covariance. The principle of relativity states that there is no preferred direction in spacetime, so singling out the time direction $x^0=t$ is arbitrary. But, more importantly, the Hamiltonian approach becomes functional, in the sense that the Hamiltonian is no longer a function of finitely many variables, but rather a functional whose arguments are fields with infinitely many degrees of freedom (one per point of the constant-time slice $\Sigma$). Consequently this approach introduces all the dificulties associated with functional analysis.
+    This approach is problematic for several reasons. First, it breaks manifest covariance. The principle of relativity states that there is no preferred direction in spacetime, so singling out the time direction $x^0=t$ is arbitrary. But, more importantly, the Hamiltonian approach becomes functional, in the sense that the Hamiltonian is no longer a function of finitely many variables, but rather a functional whose arguments are fields with infinitely many degrees of freedom (one for each point of the constant-time slice $\Sigma$). Consequently this approach introduces all the difficulties associated with functional analysis.
 
-    The covariant alternative solve both of these problems by performing the Legendre transform with respect to all the coordinates of spacetime, rather than with respect to only one arbitrarily chosen direction of spacetime. Indeed, in the covariant Hamiltonian approach, for each field $\phi^i$ we define several momenta $p^\mu_i$, one per direction of spacetime, as:
+    The covariant alternative solves both of these problems by performing the Legendre transform with respect to all the coordinates of spacetime, rather than with respect to only one arbitrarily chosen direction of spacetime. Indeed, in the covariant Hamiltonian approach, for each field $\phi^i$ we define several momenta $p^\mu_i$, one per spacetime direction, as:
     \[
     p^\mu_i=\frac{\partial\mathcal{L}}{\partial(\partial_\mu \phi^i)}
     \] and define the de Donder-Weyl Hamiltonian as:
@@ -68,7 +68,7 @@ navigation: false
     \] which leads to the following system of partial differential equations, called the de Donder-Weyl-Hamilton equations:
     \[
     \partial_\mu\phi^i=\frac{\partial\mathcal{H}}{\partial p^\mu_i}\qquad\partial_\mu p^\mu_i=-\frac{\partial\mathcal{H}}{\partial\phi^i}
-    \] This approach remains explicitly covariant and provides a finite-dimensional setting in which the local structure of field dynamics can be studied. Also, it leads to a geometric formulation, called the multisymplectic formalism of field theory, since this equations can be also interpreted as a distribution defined by a multivector field.
+    \] This approach remains explicitly covariant and provides a finite-dimensional setting in which the local structure of field dynamics can be studied. Furthermore, it leads to a geometric formulation, called the multisymplectic formalism of field theory, since these equations can also be interpreted as a distribution defined by a multivector field.
 
     This covariant approach to field theory allows us to generalize in a geometric way some important results of classical mechanics such as Noether's theorem or to generalize the bracket structure in a manifestly covariant and finite-dimensional way.
         </p>
@@ -82,22 +82,22 @@ navigation: false
     </summary>
     <div class="faq-answer"><p class="answer-text">Multisymplectic geometry is the higher-dimensional analogue of symplectic geometry. Instead of having a closed $2-$form $\omega$, as in symplectic geometry, the geometry of the system is described by a closed $(n+1)-$form, where $n$ is the dimension of spacetime. When the underlying domain is just the time, $n$ is just equal to 1 and this recovers symplectic geometry and classical mechanics. But, in general, multisymplectic geometry makes it possible to describe the geometry of dynamical systems which extends throughout all the spacetime, as is the case in field theory.
     
-    But, what is the relationship between the dynamics of field theories and the multisymplectic geometry? The answer is that multisymplectic forms are the objects that arise naturally when studying the geometry of variational principles, and a large class of physical systems in field theory is governed variational principles, with the physical trajectories being those that make the action stationary.
+    But, what is the relationship between the dynamics of field theories and the multisymplectic geometry? The answer is that multisymplectic forms are the objects that arise naturally when studying the geometry of variational principles, and a large class of physical systems in field theory is governed by variational principles, with the physical trajectories being those that make the action stationary.
 
-    To see how multisymplectic geometry arises naturally from variational principles, let $\mathcal{M}$ be the base space, typically spacetime, and let $\pi:E\to\mathcal{M}$ be a locally trivial fiber bundle, where the fiber describes what are the fields that defined over spacetime. Now consider a functional on the sections $\psi:\mathcal{M}\to E$ given by:
+    To see how multisymplectic geometry arises naturally from variational principles, let $\mathcal{M}$ be the base space, typically spacetime, and let $\pi:E\to\mathcal{M}$ be a locally trivial fiber bundle, where the fiber describes the fields defined over spacetime. Now consider a functional on the sections $\psi:\mathcal{M}\to E$ given by:
     \[
     S[\psi]=\int_{\mathcal{M}}\psi^*\Theta
     \] where $\Theta$ is a $n$-form $\Theta\in\Omega^n(E)$. The objective of the variational principle is to find the sections $\psi$ for which $S[\psi]$ is in a critical point. In order to do so, we compute the variation of the action, and, after a bit of calculation, and discarding the boundary terms, we arrive at:
     \[
     \delta_X S[\psi]=\int_{\mathcal{M}}\psi^*\iota_Xd\Theta
-    \] and, in order for the action to be in a critical point, we require that this variation vanishes for all the (vertical) vector fields X. After applying the fundamental lemma of calculus of variations, we conclude that $\psi$ makes the action stationary (and, therefore, we call it a <em>solution</em> of the variational problem) if and only if $\psi^*\iota_Xd\Theta=0$ for every (vertical) vector field $X$ (and, therefore, we call these the <em>equations of motion</em> of the variational problem).
+    \] and, in order for the action to be in a critical point, we require this variation to vanish for all (vertical) vector fields X. After applying the fundamental lemma of calculus of variations, we conclude that $\psi$ makes the action stationary (and, therefore, we call it a <em>solution</em> of the variational problem) if and only if $\psi^*\iota_Xd\Theta=0$ for every (vertical) vector field $X$ (and, therefore, we call these the <em>equations of motion</em> of the variational problem).
 
-    Thus, the solutions of the variational problem are determined by how the vector fields $X$ act on the differential form $\Omega=d\Theta$. Since $\Omega$ is exact, it is also closed, and therefore $\Omega$ is a multisymplectic $(n+1)-$form. In turn, this multisymplectic form describes not only the solutions of the equations of motion, but also the symmetries, conserved quantities, and the evolution of certain observables of the dynamical system, among many other interesting properties, without the need to solve explicitly the equations of motion, which in most cases do not admit explicit solution.
+    Thus, the solutions of the variational problem are determined by how the vector fields $X$ act on the differential form $\Omega=d\Theta$. Since $\Omega$ is exact, it is also closed, and therefore $\Omega$ is a multisymplectic $(n+1)-$form. In turn, this multisymplectic form encodes not only the solutions of the equations of motion, but also the symmetries, conserved quantities, and the evolution of certain observables of the dynamical system, among many other interesting properties, without the need to solve explicitly the equations of motion, which, in most cases, do not admit explicit solutions.
 
-    Finally, let me note that the above argument is only applicable for variational problems of the "general kind", in which we look for any section that makes the action stationary, since the applicability of the fundamental lemma of calculus of variations depends on this. However, variational principles in physics are not of this kind. In physics, the variational problem is given by a Lagrangian $L=\mathcal{L}(\phi^i, \partial_\mu\phi^i; x^\mu)d^nx$ which depends on the velocities $\partial_\mu\phi^i$. In such a case, the variation of the action is no longer arbitrary, since the variation of the action has to preserve the fact that the velocities are derivatives of the field. However, we may look for some form $\Theta_{PC}$ (the Poincaré-Cartan form), which is Lepage equivalent to $L=\mathcal{L}d^nx$ (so that they define the same variational problem), and for which the equations of motion of the Lagrangian problem (the Euler-Lagrange equations) are given by the solutions of the general variational problem. Such a differential form indeed exists and is given by:
+    Finally, it is worth noting that the above argument is applicable only to variational problems of the "general kind", in which we look for any section that makes the action stationary, since the applicability of the fundamental lemma of calculus of variations depends on this. However, variational principles in physics are not of this kind. In physics, the variational problem is given by a Lagrangian $L=\mathcal{L}(\phi^i, \partial_\mu\phi^i; x^\mu)d^nx$ which depends on the velocities $\partial_\mu\phi^i$. In such a case, the variation of the action is no longer arbitrary, since the variations of the fields have to preserve the fact that the velocities are derivatives of the field. However, we may look for some form $\Theta_{PC}$ (the Poincaré-Cartan form), which is Lepage equivalent to $L=\mathcal{L}d^nx$ (so that they define the same variational problem), and for which the equations of motion of the Lagrangian problem (the Euler-Lagrange equations) are recovered as the solutions of the associated general variational problem. Such a differential form indeed exists and is given by:
     <div class="math-display-horizontal">\[
     \Theta_{PC}=\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi^i)}d\phi^i\wedge d^{n-1}x_\mu-\left(\frac{\partial\mathcal{L}}{\partial(\partial_\mu \phi^i)}\partial_\mu \phi^i-\mathcal{L}\right)d^nx
-    \]</div> In this expression for the Poincaré-Cartan form, we recognize the multimomenta and the de Donder-Weyl Hamiltonian as the coefficients of the two terms, thereby explaining the importance of these quantities in the covariant formulation of classical field theory.
+    \]</div> In this expression for the Poincaré-Cartan form, we recognize the multimomenta and the de Donder-Weyl Hamiltonian as the coefficients appearing in the two terms, thereby explaining the importance of these quantities in the covariant formulation of classical field theory.
         </p>
     </div>
 </details>
