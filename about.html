@@ -111,14 +111,13 @@ I generally use my second surname when abbreviating or referring to my name
   </div>
 
   <div class="foto">
-    <img src="../assets/images/personal/Personal10.jpeg">
-    <div class="cartel">Giving my first talk at Loughborough University</div>
+    <img src="../assets/images/personal/Personal5.jpeg">
+    <div class="cartel">Rubén, Carla, Matteo and me in Tenerife</div>
   </div>
 
-  
   <div class="foto">
-    <img src="../assets/images/personal/Personal4.jpeg">
-    <div class="cartel">Sharing a dessert with my supervisor, Jordi Gaset</div>
+    <img src="../assets/images/personal/Personal10.jpeg">
+    <div class="cartel">Giving my first talk at Loughborough University</div>
   </div>
 
   <div class="foto">
@@ -126,25 +125,24 @@ I generally use my second surname when abbreviating or referring to my name
     <div class="cartel">Playing rugby</div>
   </div>
 
+  <div class="foto">
+    <img src="../assets/images/personal/Personal8.jpeg">
+    <div class="cartel">Trip to the lake in Bȩdlewo with the summer school students</div>
+  </div>
   
   <div class="foto">
     <img src="../assets/images/personal/Personal6.jpeg">
     <div class="cartel">Taking notes at the University of La Laguna</div>
   </div>
-
+  
   <div class="foto">
-    <img src="../assets/images/personal/Personal5.jpeg">
-    <div class="cartel">Rubén, Carla, Matteo and me in Tenerife</div>
+    <img src="../assets/images/personal/Personal4.jpeg">
+    <div class="cartel">Sharing a dessert with my supervisor, Jordi Gaset</div>
   </div>
 
   <div class="foto">
     <img src="../assets/images/personal/Personal7.jpeg">
     <div class="cartel">Giving my talk on field theory on manifolds with boundaries in Miraflores</div>
-  </div>
-
-  <div class="foto">
-    <img src="../assets/images/personal/Personal8.jpeg">
-    <div class="cartel">Trip to the lake in Bȩdlewo with the summer school students</div>
   </div>
 
   <div class="foto">
@@ -173,7 +171,6 @@ I generally use my second surname when abbreviating or referring to my name
 </div>
 
 
-
 <script>
   const fotos = document.querySelectorAll('.foto img');
   const visor = document.getElementById('visor');
@@ -181,23 +178,55 @@ I generally use my second surname when abbreviating or referring to my name
   const cerrar = document.querySelector('.cerrar');
 
   fotos.forEach(foto => {
+
     foto.addEventListener('click', function () {
+
       imagenGrande.src = this.src;
       visor.style.display = 'flex';
+
+      // Añadimos una entrada al historial
+      history.pushState({ visorAbierto: true }, '');
     });
+
   });
 
+  // Cerrar con la X
   cerrar.addEventListener('click', function () {
+
     visor.style.display = 'none';
+
+    // Quitamos la entrada que añadimos al historial
+    if (history.state && history.state.visorAbierto) {
+      history.back();
+    }
+
   });
 
+  // Cerrar haciendo clic fuera de la imagen
   visor.addEventListener('click', function (e) {
+
     if (e.target === visor) {
+
+      visor.style.display = 'none';
+
+      // Quitamos la entrada del historial
+      if (history.state && history.state.visorAbierto) {
+        history.back();
+      }
+
+    }
+
+  });
+
+  // Botón "Atrás" del navegador
+  window.addEventListener('popstate', function (e) {
+
+    if (visor.style.display === 'flex') {
       visor.style.display = 'none';
     }
+
   });
 </script>
-
 
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
