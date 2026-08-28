@@ -2584,6 +2584,13 @@ summary h3{
   color: #e53935 !important;
 }
 
+.leaflet-container .blue-link {
+    color: blue !important;
+}
+
+.leaflet-container .blue-link:visited {
+    color: #551A8B !important;
+}
 
 
 .foto2 img {

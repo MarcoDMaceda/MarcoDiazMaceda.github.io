@@ -172,63 +172,6 @@ I generally use my second surname when abbreviating or referring to my name
 </div>
 
 
-<script>
-  const fotos = document.querySelectorAll('.foto img');
-  const visor = document.getElementById('visor');
-  const imagenGrande = document.getElementById('imagenGrande');
-  const cerrar = document.querySelector('.cerrar');
-
-  fotos.forEach(foto => {
-
-    foto.addEventListener('click', function () {
-
-      imagenGrande.src = this.src;
-      visor.style.display = 'flex';
-
-      // Añadimos una entrada al historial
-      history.pushState({ visorAbierto: true }, '');
-    });
-
-  });
-
-  // Cerrar con la X
-  cerrar.addEventListener('click', function () {
-
-    visor.style.display = 'none';
-
-    // Quitamos la entrada que añadimos al historial
-    if (history.state && history.state.visorAbierto) {
-      history.back();
-    }
-
-  });
-
-  // Cerrar haciendo clic fuera de la imagen
-  visor.addEventListener('click', function (e) {
-
-    if (e.target === visor) {
-
-      visor.style.display = 'none';
-
-      // Quitamos la entrada del historial
-      if (history.state && history.state.visorAbierto) {
-        history.back();
-      }
-
-    }
-
-  });
-
-  // Botón "Atrás" del navegador
-  window.addEventListener('popstate', function (e) {
-
-    if (visor.style.display === 'flex') {
-      visor.style.display = 'none';
-    }
-
-  });
-</script>
-
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
@@ -269,19 +212,88 @@ I generally use my second surname when abbreviating or referring to my name
 
   L.tileLayer(map2, atr2).addTo(map);
 
-  L.marker([40.45345, -3.71885]).addTo(map).bindPopup("<h4>Madrid</h4><p>Madrid is my hometown and the place where I carry out my research. Our <a href='https://geommphys.github.io/' target='_blank'>research group</a> is also based here.</p>")
+  L.marker([40.45345, -3.71885]).addTo(map).bindPopup("<h4>Madrid</h4><p>Madrid is my hometown and the place where I carry out my research. Our <a class='blue-link' href='https://geommphys.github.io/' target='_blank'>research group</a> is also based here.</p>")
 
   // L.marker([40.5453, -3.6952]).addTo(map).bindPopup('<b>Madrid</b><br>Base home.')
 
-  L.marker([40.820489, -3.785111]).addTo(map).bindPopup("<h4>Miraflores de la Sierra</h4><p>Here we celebrate annually the <a href='https://www.icmat.es/schools/2026/SUMMER-SCHOOL-GMC/index.php' target='_blank'>International ICMAT Summer School on Geometry, Dynamics and Field theory</a>.  </p><p>After classes in the mornings and talks in the afternoon, we enjoyed playing table tenis or swimming in the pool, before playing some games in the eveningnight. </p><p>Here I presented my first poster.</p><div class='foto3'><img src='../assets/images/workshop/Workshop_Miraflores_2026_2.png'></div>")
+  L.marker([40.820489, -3.785111]).addTo(map).bindPopup("<h4>Miraflores de la Sierra</h4><p>Here we celebrate annually the <a class='blue-link' href='https://www.icmat.es/schools/2026/SUMMER-SCHOOL-GMC/index.php' target='_blank'>International ICMAT Summer School on Geometry, Dynamics and Field theory</a>.  </p><p>After classes in the mornings and talks in the afternoon, we enjoyed playing table tenis or swimming in the pool, before playing some games in the eveningnight. </p><p>Here I presented my first poster.</p><div class='foto3'><img src='../assets/images/workshop/Workshop_Miraflores_2026_2.png'></div>")
 
-  L.marker([28.48165, -16.3209]).addTo(map).bindPopup("<h4>La Laguna</h4><p>I traveled to this city in Tenerife for the <a href='https://wp.ull.es/8ibmgmft/' target='_blank'>VIII Iberoamerican Meeting on Geometry, Dynamics and Field theory</a>, commemorating the 60th birthday of Juan Carlos Marrero. </p><p>In contrast to the typical Canarian weather, the trip was accompanied by frequent rainfall. We visited Anaga Natural Park, but I couldn't go on the travel to El Teide because I fell sick.</p><div class='foto3'><img src='../assets/images/workshop/Workshop_Tenerife.jpeg'></div>")
+  L.marker([28.48165, -16.3209]).addTo(map).bindPopup("<h4>La Laguna</h4><p>I traveled to this city in Tenerife for the <a class='blue-link' href='https://wp.ull.es/8ibmgmft/' target='_blank'>VIII Iberoamerican Meeting on Geometry, Dynamics and Field theory</a>, commemorating the 60th birthday of Juan Carlos Marrero. </p><p>In contrast to the typical Canarian weather, the trip was accompanied by frequent rainfall. We visited Anaga Natural Park, but I couldn't go on the travel to El Teide because I fell sick.</p><div class='foto3'><img src='../assets/images/workshop/Workshop_Tenerife.jpeg'></div>")
 
-  L.marker([41.119722, 1.260556]).addTo(map).bindPopup("<h4>Tarragona</h4><p>I participated in the <a href='https://webs-deim.urv.cat/~34ifwgp/index.html' target='_blank'>XXXIV International Fall Workshop on Geometry and Physics</a>, celebrating the research carried out by Narciso Román Roy on the occasion of his retirement.</p>")
+  L.marker([41.119722, 1.260556]).addTo(map).bindPopup("<h4>Tarragona</h4><p>I participated in the <a class='blue-link' href='https://webs-deim.urv.cat/~34ifwgp/index.html' target='_blank'>XXXIV International Fall Workshop on Geometry and Physics</a>, celebrating the research carried out by Narciso Román Roy on the occasion of his retirement.</p>")
 
-  L.marker([52.766333, -1.228511]).addTo(map).bindPopup("<h4>Loughborough</h4><p>I travelled to Loughborough for the <a href='https://www.lboro.ac.uk/departments/maths/events/conferences-and-workshops/yrw-gdft/' target='_blank'>XX International Young Researchers Workshop on Geometry, Dynamics and Field Theory</a>. </p><p>Here I presented my first talk on field theory on manifolds with boundary.</p><div class='foto3'><img src='../assets/images/workshop/Workshop_Loughborough.jpeg'></div>")
+  L.marker([52.766333, -1.228511]).addTo(map).bindPopup("<h4>Loughborough</h4><p>I travelled to Loughborough for the <a class='blue-link' href='https://www.lboro.ac.uk/departments/maths/events/conferences-and-workshops/yrw-gdft/' target='_blank'>XX International Young Researchers Workshop on Geometry, Dynamics and Field Theory</a>. </p><p>Here I presented my first talk on field theory on manifolds with boundary.</p><div class='foto3'><img src='../assets/images/workshop/Workshop_Loughborough.jpeg'></div>")
   
-  L.marker([52.21275, 20.98270]).addTo(map).bindPopup("<h4>Warsaw</h4><p>I stayed here for one month for a research visit, which coincided with the <a href='https://www.fuw.edu.pl/KMMF/GFT2026/' target='_blank'>2nd International Workshop on Geometric Field Theory</a>. </p><p>At this workshop, I was awarded the prize for the best talk.</p><div class='foto3'><img src='../assets/images/workshop/Workshop_Warsaw.jpeg'></div>")
+  L.marker([52.21275, 20.98270]).addTo(map).bindPopup("<h4>Warsaw</h4><p>I stayed here for one month for a research visit, which coincided with the <a class='blue-link' href='https://www.fuw.edu.pl/KMMF/GFT2026/' target='_blank'>2nd International Workshop on Geometric Field Theory</a>. </p><p>At this workshop, I was awarded the prize for the best talk.</p><div class='foto3'><img src='../assets/images/workshop/Workshop_Warsaw.jpeg'></div>")
 
-  L.marker([52.2357966, 16.729391]).addTo(map).bindPopup("<h4>Bȩdlewo</h4><p>Summer school on <a href='https://sites.google.com/impan.pl/dgmp2026/home-page'>Differential-Geometric and Topological Methods in Modern Physics</a>, held in a 19th century palace surrounded by lakes and forests.  </p><p>After the conferences in the mornings, we enjoyed playing pool, foosball and darts, and engaged in mathematical conversations with the participants around the bonfire.</p><div class='foto2'><img src='../assets/images/workshop/Workshop_Bedlewo3.png'></div>")
+  L.marker([52.2357966, 16.729391]).addTo(map).bindPopup("<h4>Bȩdlewo</h4><p>Summer school on <a class='blue-link' href='https://sites.google.com/impan.pl/dgmp2026/home-page' target='_blank'>Differential-Geometric and Topological Methods in Modern Physics</a>, held in a 19th century palace surrounded by lakes and forests.  </p><p>After the conferences in the mornings, we enjoyed playing pool, foosball and darts, and engaged in mathematical conversations with the participants around the bonfire.</p><div class='foto3'><img src='../assets/images/workshop/Workshop_Bedlewo3.png'></div>")
+</script>
+
+
+<script>
+  const visor = document.getElementById('visor');
+  const imagenGrande = document.getElementById('imagenGrande');
+  const cerrar = document.querySelector('.cerrar');
+
+  document.addEventListener('click', function (e) {
+
+    // Detectamos cualquier imagen dentro de .foto2,
+    // incluso las creadas dinámicamente por Leaflet
+    if (e.target.matches(['.foto3 img', '.foto img'])) {
+
+      imagenGrande.src = e.target.src;
+      visor.style.display = 'flex';
+
+      // Bloquear scroll
+      document.body.style.overflow = 'hidden';
+
+      // Añadimos una entrada al historial
+      history.pushState({ visorAbierto: true }, '');
+    }
+
+  });
+
+
+  // Cerrar con la X
+  cerrar.addEventListener('click', function () {
+
+    visor.style.display = 'none';
+
+    // Restaurar scroll
+    document.body.style.overflow = '';
+
+    // Quitamos la entrada que añadimos al historial
+    if (history.state && history.state.visorAbierto) {
+      history.back();
+    }
+
+  });
+
+  // Cerrar haciendo clic fuera de la imagen
+  visor.addEventListener('click', function (e) {
+
+    if (e.target === visor) {
+
+      visor.style.display = 'none';
+
+      // Restaurar scroll
+      document.body.style.overflow = '';
+
+      // Quitamos la entrada del historial
+      if (history.state && history.state.visorAbierto) {
+        history.back();
+      }
+
+    }
+
+  });
+
+  // Botón "Atrás" del navegador
+  window.addEventListener('popstate', function (e) {
+
+    if (visor.style.display === 'flex') {
+      visor.style.display = 'none';
+    }
+
+  });
 </script>

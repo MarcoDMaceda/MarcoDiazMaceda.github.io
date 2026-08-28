@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://marcodiazmaceda.github.io/sitemap.xml
